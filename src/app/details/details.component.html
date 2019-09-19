@@ -1,0 +1,33 @@
+
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">Room No</th>
+    <th scope="col">Name</th>
+    <th scope="col">Aadhar</th>
+    <th scope="col">Pan Card</th>
+    <th scope="col">Edit</th>
+    <th scope="col">Delete</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let country of users; index as i">
+    <!-- <th scope="row">{{ i + 1 }}</th> -->
+    <td>
+            <!-- './assets/ff80818162e6a1b90162f29703324f6d_85292_large.jpg' -->
+      B1{{country.room}}
+    </td>
+    <td>{{ country.name }}</td>
+    
+    <td>{{ country.Aadhar }}</td>
+    <td>{{ country.Pan}}</td>
+    <!-- <button class="btn btn-info btn-md" (click)="editClick('a','b')">Edit</button> -->
+    <td><button class="btn btn-lg btn-info" (click)="open(country)">EDIT</button></td>
+    <td><button class="btn btn-danger btn-md" (click)="deleteClick(country)">Delete</button></td>
+  </tr>
+  </tbody>
+</table>
+
+
+     

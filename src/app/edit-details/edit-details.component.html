@@ -1,0 +1,41 @@
+<div class="container my-5">
+        
+          <div class="row">
+              
+            <div class="col-md-6 mx-auto">
+              
+              
+              <div class="form-group">
+                    <label class="form-control-placeholder" for="name"><strong><h3>Name</h3></strong></label>
+                  <input (keyup)="keyPress1()" type="text" id="name" pattern="[A-Za-z]" minlength="1" class="form-control" [(ngModel)]="name" required>
+                  <div *ngIf="booln1" class="text-danger"><strong>Please Enter Name</strong></div>
+              </div>
+              <div class="form-group">
+                    <label class="form-control-placeholder" for="room"><strong><h3>Room No</h3></strong></label>
+                  <input disabled="true" (keyup)="keyPress3()" type="number" id="room" class="form-control" [(ngModel)]="room" required>
+                  <div *ngIf="booln3" class="text-danger"><strong>Please Enter Room Between 101 to 110</strong></div>
+              </div>
+              <div class="form-group">
+                      <label class="form-control-placeholder" for="building"><strong><h3>Building No</h3></strong></label>
+                  <input disabled="true" (keyup)="keyPress2()" type="number" id="building" class="form-control"  [(ngModel)]="building" required>
+                  <div *ngIf="booln2" class="text-danger"><strong>Please Enter Building Between 1 to 5</strong></div>
+              </div>
+            </div>
+            <div class="col-md-6 mx-auto">
+                    <div class="form-group">
+                            <label class="form-control-placeholder" for="pan"><strong><h3>Pan</h3></strong></label>
+                        <input (keyup)="keyPress4()" type="text" id="pan" class="form-control" [(ngModel)]="pan" required>
+                        <div *ngIf="booln4" class="text-danger"><strong>Pan Number Should be 10 Characters</strong></div>
+                    </div>
+                    <div class="form-group">
+                            <label class="form-control-placeholder" for="aadhar"><strong><h3>Aadhar Card</h3></strong></label>
+                        <input (keyup)="keyPress5()" type="number" maxlength="12" id="aadhar" class="form-control" [(ngModel)]="aadhar" required>
+                        <div *ngIf="booln5" class="text-danger"><strong>Aadhar Number Should Be 12 Digit</strong></div>
+                    </div>
+                    <div class="form-group">
+                            <!-- <label class="form-control-placeholder" for="aadhar"><strong><h3></h3></strong></label> -->
+                            <div><button class="btn btn-success btn-lg" style="float: right;" (click)="validate()"> Submit</button></div>
+                    </div>
+            </div>
+          </div>
+        </div>
